@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Piedra papel y tijerjas</title>
+        <style>
+            #container {
+                margin-top: 50px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .panel {
+                width: 1000px;
+                height: 500px;
+                border: solid;
+                border-color: black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .panel img {
+                width: 300px;
+                height: 300px;
+                border-radius: 50%;
+            }
+
+            #message-loss {
+                display: none;
+                justify-content: space-around;
+                flex-direction: column;
+                align-items: center;
+                position: absolute;
+                width: 600px;
+                height: 400px;
+                border-radius: 30px;
+                color: aliceblue;
+                opacity: 0.9;
+                animation: pop 0.9s;
+            }
+
+            #message-win {
+                display: none;
+                justify-content: space-around;
+                flex-direction: column;
+                align-items: center;
+                position: absolute;
+                width: 600px;
+                height: 400px;
+                border-radius: 30px;
+                
+                opacity: 0.9;
+                animation: pop 0.9s;
+            }
+
+            @keyframes pop {
+                0% {
+                    opacity: 0;
+                    transform: scale(0);
+                }
+                50% {
+                    opacity: 0.8;
+                    transform: scale(1.1);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div id="message-loss">
+                <div>
+                    <h3>Has Perdido</h3>
+                    <p id="message"></p>
+                </div>
+                <button id="close">Cerrar</button>
+            </div>
+
+            <div id="message-win">
+                <div>
+                    <h3>Has Ganado</h3>
+                    <p id="messagew"></p>
+                </div>
+                <button id="closes">Cerrar</button>
+            </div>
+
+            <div class="panel">
+                <img src="img/descarga.png" alt="" id="machine">
+            </div>
+            
+            <div>
+                <div>
+                    <button id="rock">
+                        <img src="img/piedra.png" alt="Piedra" id="piedra">
+                        <h2>Piedra</h2>
+                    </button>
+                    <button id="paper">
+                        <img src="img/papel.png" alt="Papel" id="papel">
+                        <h2>Papel</h2>
+                    </button>
+                    <button id="scissors">
+                        <img src="img/tijera.png" alt="Tijera" id="tijera">
+                        <h2>Tijera</h2>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <script type="module" src="js/app.js"></script>
+        <script type="module" src="js/messages.mjs"></script>
+    </body>
+</html>
