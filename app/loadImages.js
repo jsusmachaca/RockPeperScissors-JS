@@ -1,4 +1,4 @@
-import { displays, displaysWin } from "./messages.mjs";
+import { displays, displaysWin } from "../index.mjs";
 
 
 const rock = document.getElementById('rock');

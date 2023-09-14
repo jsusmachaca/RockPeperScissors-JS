@@ -27,7 +27,7 @@
                 border-radius: 50%;
             }
 
-            #message-loss {
+            .display{
                 display: none;
                 justify-content: space-around;
                 flex-direction: column;
@@ -36,22 +36,9 @@
                 width: 600px;
                 height: 400px;
                 border-radius: 30px;
-                color: aliceblue;
-                opacity: 0.9;
-                animation: pop 0.9s;
-            }
-
-            #message-win {
-                display: none;
-                justify-content: space-around;
-                flex-direction: column;
-                align-items: center;
-                position: absolute;
-                width: 600px;
-                height: 400px;
-                border-radius: 30px;
-                
-                opacity: 0.9;
+                background-color: #29292A;
+                color: whitesmoke;  
+                opacity: 0.99;
                 animation: pop 0.9s;
             }
 
@@ -61,7 +48,7 @@
                     transform: scale(0);
                 }
                 50% {
-                    opacity: 0.8;
+                    opacity: 0.99;
                     transform: scale(1.1);
                 }
             }
@@ -69,24 +56,9 @@
     </head>
     <body>
         <div id="container">
-            <div id="message-loss">
-                <div>
-                    <h3>Has Perdido</h3>
-                    <p id="message"></p>
-                </div>
-                <button id="close">Cerrar</button>
-            </div>
-
-            <div id="message-win">
-                <div>
-                    <h3>Has Ganado</h3>
-                    <p id="messagew"></p>
-                </div>
-                <button id="closes">Cerrar</button>
-            </div>
 
             <div class="panel">
-                <img src="img/descarga.png" alt="" id="machine">
+                <img src="img/descarga.png" alt="" id="none-play">
             </div>
             
             <div>
@@ -106,7 +78,7 @@
                 </div>
             </div>
         </div>
-        <script type="module" src="js/app.js"></script>
-        <script type="module" src="js/messages.mjs"></script>
+        <script type="module" src="index.js"></script>
+        <script type="module" src="js/loadImages.js"></script>
     </body>
 </html>
